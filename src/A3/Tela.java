@@ -120,7 +120,10 @@ public class Tela extends JFrame implements ActionListener{
         if(e.getSource() == botaoEntrar) {
             System.out.println("Botao entrar clicado");
         } else if(e.getSource() == botaoCadastrar) {
-            System.out.println("Botao cadastrar clicado");
+            // System.out.println("Botao cadastrar clicado");
+            this.setVisible(false);
+            TelaCadastro telaCadastro = new TelaCadastro(this);
+            telaCadastro.setVisible(true);
         }
     }
     

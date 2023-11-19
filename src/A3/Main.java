@@ -3,7 +3,7 @@ package A3;
 public class Main {
    public static void main(String[] args) {
     
-      TelaCadastro telaCadastro = new TelaCadastro();
+      Tela tela = new Tela();
 
    } 
 }

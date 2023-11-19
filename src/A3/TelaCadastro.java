@@ -12,6 +12,7 @@ import javax.swing.*;
 
 public class TelaCadastro extends JFrame implements ActionListener{
 
+    private Tela telaLogin;
     JTextField campoNome;
     JTextField campoEmail;
     JTextField campoCpf;
@@ -21,7 +22,8 @@ public class TelaCadastro extends JFrame implements ActionListener{
     JButton botaoCadastrar;
     JButton botaoCancelar;
 
-    TelaCadastro() {
+    TelaCadastro(Tela telaLogin) {
+        this.telaLogin = telaLogin;
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.getContentPane().setBackground(new Color(0x111111));
         this.setPreferredSize(new Dimension(1280, 720));
@@ -148,7 +150,9 @@ public class TelaCadastro extends JFrame implements ActionListener{
         if (e.getSource() == botaoCadastrar) {
             System.out.println("Botao cadastrar clicado");
         } else if (e.getSource() == botaoCancelar) {
-            System.out.println("Botao cancelar clicado");
+            // System.out.println("Botao cancelar clicado");
+            this.setVisible(false);
+            telaLogin.setVisible(true);
         }
     }
 }
